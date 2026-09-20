@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" font-family="Inter, system-ui, sans-serif">
+  <rect width="1200" height="560" fill="#0B0C0E"/>
+  <style>.b{fill:#141518;stroke:rgba(255,255,255,.16)}.t{fill:#ECECEF;font-size:16px;font-weight:600}.s{fill:rgba(236,236,239,.62);font-size:13px}.h{fill:#1C1E23;stroke:#ECECEF;stroke-width:1.2}</style>
+  <text x="40" y="44" class="t" font-size="20">One person, one assistant, a company: the layers</text>
+  <rect x="40" y="80" width="1120" height="70" rx="12" class="h"/>
+  <text x="60" y="108" class="t">Human: architecture, briefs, acceptance, clients</text>
+  <text x="60" y="130" class="s">talks in plain words; never types code; says yes or no to what is shown on a temporary address</text>
+  <rect x="40" y="170" width="360" height="110" rx="12" class="b"/><text x="60" y="198" class="t">Sessions (Claude Code, Codex)</text><text x="60" y="222" class="s">build, deploy, verify; every "done" needs a run</text><text x="60" y="242" class="s">several windows talk to each other before touching a shared file</text>
+  <rect x="420" y="170" width="360" height="110" rx="12" class="b"/><text x="440" y="198" class="t">Employees in Telegram</text><text x="440" y="222" class="s">six role bots: sales, engineer, designer, security,</text><text x="440" y="242" class="s">assistant, curator; a task feed; night routines</text>
+  <rect x="800" y="170" width="360" height="110" rx="12" class="b"/><text x="820" y="198" class="t">Memory</text><text x="820" y="222" class="s">files + an index loaded every session; core rules apart;</text><text x="820" y="242" class="s">an index guard that notices when a file outgrew its line</text>
+  <rect x="40" y="300" width="360" height="110" rx="12" class="b"/><text x="60" y="328" class="t">Guardrails (hooks)</text><text x="60" y="352" class="s">foreign text is data · agents wait for a yes · no "done"</text><text x="60" y="372" class="s">without a run · fact or guess · no visual without the critic</text>
+  <rect x="420" y="300" width="360" height="110" rx="12" class="b"/><text x="440" y="328" class="t">Watchdogs</text><text x="440" y="352" class="s">routines that die silently · canaries for the tool loop ·</text><text x="440" y="372" class="s">a pulse for "ran and returned garbage" · probes on change</text>
+  <rect x="800" y="300" width="360" height="110" rx="12" class="b"/><text x="820" y="328" class="t">Registry</text><text x="820" y="352" class="s">400+ cards: what it is, where it lives, who owns it,</text><text x="820" y="372" class="s">how to check it is alive; findings when a card goes stale</text>
+  <rect x="40" y="430" width="550" height="90" rx="12" class="b"/><text x="60" y="458" class="t">Servers and failover</text><text x="60" y="482" class="s">a small VPS for bots and sites, the Mac as the workshop; a toggle asks for a resource and gets whichever side is alive</text>
+  <rect x="610" y="430" width="550" height="90" rx="12" class="b"/><text x="630" y="458" class="t">Delivery</text><text x="630" y="482" class="s">temporary addresses, variant stands switched with keys, checks at five widths in two engines, a critic before every show</text>
+</svg>

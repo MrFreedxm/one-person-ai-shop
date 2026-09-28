@@ -4,7 +4,7 @@ How one person runs a company, its clients and its own tooling with an AI assist
 
 ![layers](i/layers.png)
 
-![status](https://img.shields.io/badge/status-living%20document-111) ![parts](https://img.shields.io/badge/parts%20in%20the%20registry-414-111) ![built with](https://img.shields.io/badge/built%20with-Claude%20Code%20%C2%B7%20Codex-111) ![license](https://img.shields.io/badge/license-MIT-111)
+![status](https://img.shields.io/badge/status-living%20document-111) ![parts](https://img.shields.io/badge/parts%20in%20the%20registry-442-111) ![built with](https://img.shields.io/badge/built%20with-Claude%20Code%20%C2%B7%20Codex-111) ![license](https://img.shields.io/badge/license-MIT-111)
 
 ## The shape
 
@@ -14,7 +14,7 @@ One human, one assistant, one company. The human does architecture, briefs and a
 
 **Sessions.** Claude Code and Codex on the desktop, several windows at once. Windows announce themselves to each other and write before touching a shared file. A session has a scratchpad, a project memory, and a set of hooks that run on every tool call.
 
-**Employees.** Six role bots in Telegram - sales, engineer, designer, security, assistant, curator - each a session with its own zone and its own slice of memory. They receive tasks from a feed, run night routines, and report to a group. A task is not a wake-up: waking someone up is a separate, explicit act.
+**Employees.** Six role bots in Telegram - sales, engineer, designer, security, assistant, and a partner who hands out tasks - each a session with its own zone and its own slice of memory. They receive tasks from a feed, run night routines, and report to a group. A task is not a wake-up: waking someone up is a separate, explicit act.
 
 **Memory.** File-based. Only the index is loaded into a session; a file is opened when its index line hints that the answer is inside. Core rules ("how to work with this person") live in one file loaded every time. An index guard keeps a fingerprint of each file and of its index line and complains at session start when a file changed and its line did not - because a fact with a stale line is, for the next session, absent.
 
@@ -24,7 +24,8 @@ One human, one assistant, one company. The human does architecture, briefs and a
 - "done" does not pass the exit unless something was run after the last edit;
 - a concrete claim about the system without an opened source gets "fact or guess?";
 - a visual is not shown until a critic has asked "decision or default?";
-- data files (JSON, YAML) are validated after every edit; shell variables must be ASCII.
+- data files (JSON, YAML) are validated after every edit; shell variables must be ASCII;
+- nothing is written to a production server by hand: one deploy command takes a snapshot, publishes, checks the live files byte for byte and rolls back on failure, and the rollback itself is proven by a probe.
 
 **Watchdogs.** Routines die silently: a green status and a zero result look the same. A watchdog for scheduled routines distinguishes "checked and clean" from "could not check", and the second is an alarm. Canaries confirm the tool loop is alive. A pulse looks at results, not processes: "ran and returned garbage" is caught there. Probes re-run when the code they cover changes.
 
@@ -36,7 +37,7 @@ One human, one assistant, one company. The human does architecture, briefs and a
 
 ## Numbers
 
-414 parts in the registry: 87 tools, 48 hooks, 40 skills, 38 probes, 36 routines, 30 services, 22 agents, 19 builders, 18 daemons, 17 storages, 8 bots, 6 AI employees. Counted from the registry, not estimated.
+442 parts in the registry, from its automatic inventory of 28 September 2026: 147 tools, 69 projects, 55 skills, 34 hooks, 26 daemons, 25 builders, 24 routines, 22 services, 12 storages, 6 AI employees, 4 agents, 4 pages and 14 others. Counted, not estimated; the count moves as parts are added and retired.
 
 ## What is open
 
